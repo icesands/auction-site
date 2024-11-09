@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拍賣網站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>拍賣網站</h1>
+    </header>
+
+    <section id="product">
+        <h2>商品名稱</h2>
+        <img src="path_to_your_image.jpg" alt="商品圖片" id="productImage" style="width:300px; height:auto;">
+        <p>這裡是商品的簡單描述，例如：高級手錶或藝術品。</p>
+        <p><strong>目前最高出價：</strong> <span id="currentBid">$0</span></p>
+        <p><strong>拍賣結束倒數：</strong> <span id="timer"></span></p>
+    </section>
+
+    <section id="bidForm">
+        <h2>提交出價</h2>
+        <form id="form" onsubmit="submitBid(event)">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">電話：</label>
+            <input type="tel" id="phone" required>
+
+            <label for="email">Email：</label>
+            <input type="email" id="email" required>
+
+            <label for="bidAmount">出價金額：</label>
+            <input type="number" id="bidAmount" required>
+
+            <button type="submit">提交出價</button>
+        </form>
+    </section>
+
+    <section id="bidHistory">
+        <h2>出價紀錄</h2>
+        <ul id="historyList">
+            <!-- 出價紀錄將顯示於此 -->
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
